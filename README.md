@@ -13,18 +13,12 @@ Welcome to the repository where I stash my initial games and projects developed 
 - [License](#license)
 - [Contact](#contact)
 
-## About the Repository
-
-This repository contains my initial forays into game development using the Godot Engine. The projects here range from simple prototypes to more complex mini-games, each created to test different features and functionalities of the engine. The primary goal is to learn and experiment, so the projects may vary in completeness and polish.
-
 ## Projects
 
 Here is a list of some projects you'll find in this repository:
 
-1. **Pong Clone**: A basic clone of the classic Pong game, created to understand the basics of 2D game development.
-2. **Platformer Prototype**: A simple platformer game to experiment with physics, collisions, and character movement.
-3. **Top-Down Shooter**: A top-down shooter game prototype to explore shooting mechanics, enemy AI, and level design.
-4. **Puzzle Game**: A small puzzle game to test UI elements and game logic.
+1.**Platformer Prototype**: A simple platformer game to experiment with physics, collisions, and character movement.
+2.**More to come**
 
 Each project is contained within its own directory with all the necessary assets, scripts, and scenes.
 
