@@ -2,17 +2,6 @@
 
 Welcome to the repository where I stash my initial games and projects developed using the [Godot Engine](https://godotengine.org/). This repository serves as a collection of my learning journey and experimentation with game development. Here you'll find various small projects, prototypes, and experimental features that I've worked on to get familiar with the capabilities of Godot.
 
-## Table of Contents
-
-- [About the Repository](#about-the-repository)
-- [Projects](#projects)
-- [Getting Started](#getting-started)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
 ## Projects
 
 Here is a list of some projects you'll find in this repository:
