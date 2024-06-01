@@ -24,4 +24,4 @@ To get started with any of the projects in this repository, you'll need to have 
 
 1. Clone this repository to your local machine using:
    ```sh
-   git clone https://github.com/your-username/my-first-godot-projects.git
+   git clone https://github.com/lukeslater0961/my-first-godot-projects.git
