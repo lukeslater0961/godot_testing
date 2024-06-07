@@ -25,7 +25,7 @@ func _physics_process(delta):
 	#sprite direction
 	if (direction > 0):
 		animated_sprite.flip_h = false
-	else : if (direction < 0 ):
+	else : if (direction < 0):
 		animated_sprite.flip_h = true
 	
 	#animations
