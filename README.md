@@ -26,6 +26,6 @@ To get started with any of the projects in this repository, you'll need to have 
    ```sh
    git clone https://github.com/lukeslater0961/godot_testing.git
 2. Now you have **2** choices
-   1. You can go into the **exported_games** folder and unzip the game folder you want to test and just play it
-   2. You can open th eproject by goign straight into the **game n** folder and importing the godot file into godot
+   * You can go into the **exported_games** folder and unzip the game folder you want to test and just play it
+   * You can open th eproject by goign straight into the **game n** folder and importing the godot file into godot
       
