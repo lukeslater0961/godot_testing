@@ -1,6 +1,6 @@
 # My First Games and Projects with Godot
 
-Welcome to the repository where I stash my initial games and projects developed using the [Godot Engine](https://godotengine.org/). This repository serves as a collection of my learning journey and experimentation with game development. Here you'll find various small projects, prototypes, and experimental features that I've worked on to get familiar with the capabilities of Godot.
+Welcome to the repository where I stash my initial games and projects developed using the [Godot Engine](https://godotengine.org/). This repository serves as a collection of my learning journey and experimentation with game development(on GODOT). Here you'll find various small projects, prototypes, and experimental features that I've worked on to get familiar with the capabilities of Godot.
 
 ## Projects
 
