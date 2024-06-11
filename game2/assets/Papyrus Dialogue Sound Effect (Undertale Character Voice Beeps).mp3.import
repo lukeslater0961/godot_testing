@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://byhg1vealp3jr"
+path="res://.godot/imported/Papyrus Dialogue Sound Effect (Undertale Character Voice Beeps).mp3-ba3eb6b529f3e96bcec5479a26dee77c.mp3str"
+
+[deps]
+
+source_file="res://assets/Papyrus Dialogue Sound Effect (Undertale Character Voice Beeps).mp3"
+dest_files=["res://.godot/imported/Papyrus Dialogue Sound Effect (Undertale Character Voice Beeps).mp3-ba3eb6b529f3e96bcec5479a26dee77c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

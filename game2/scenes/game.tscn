@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://blvh14lx7458j"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 334.0
+offset_top = 177.0
+offset_right = 642.0
+offset_bottom = 291.0
+text = "BITCH
+"

@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://xpp0vl1hr2nx"]
+
+[ext_resource type="Script" path="res://scripts/options.gd" id="1_l5vjy"]
+[ext_resource type="AudioStream" uid="uid://cgjnnyb05mbj" path="res://assets/menu_song.mp3" id="2_e2r5g"]
+[ext_resource type="Texture2D" uid="uid://s3dp8xglp11x" path="res://assets/Quit.png" id="3_2o2gk"]
+[ext_resource type="FontFile" uid="uid://cahyiaehh3ahn" path="res://assets/HachicroUndertaleBattleFontRegular-L3zlg.ttf" id="4_va7uk"]
+[ext_resource type="FontFile" uid="uid://p63ukbvo7s51" path="res://assets/DeterminationSansWebRegular-369X.ttf" id="5_2ghn5"]
+
+[node name="Options" type="Node2D"]
+script = ExtResource("1_l5vjy")
+
+[node name="Menu music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_e2r5g")
+autoplay = true
+bus = &"Music"
+
+[node name="Button_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Quit" type="TextureButton" parent="Button_manager"]
+layout_mode = 1
+offset_left = 1101.0
+offset_right = 1151.0
+offset_bottom = 53.0
+texture_normal = ExtResource("3_2o2gk")
+
+[node name="sliders" type="Node" parent="."]
+
+[node name="Master_label" type="Label" parent="sliders"]
+offset_left = 448.0
+offset_top = 134.0
+offset_right = 652.0
+offset_bottom = 169.0
+theme_override_fonts/font = ExtResource("4_va7uk")
+theme_override_font_sizes/font_size = 30
+text = "MASTER
+"
+
+[node name="MasterVolume" type="HSlider" parent="sliders/Master_label"]
+layout_mode = 0
+offset_left = -120.0
+offset_top = 50.0
+offset_right = 320.0
+offset_bottom = 77.0
+min_value = -50.0
+max_value = 0.0
+
+[node name="Music_label" type="Label" parent="sliders"]
+offset_left = 488.0
+offset_top = 240.0
+offset_right = 616.0
+offset_bottom = 298.0
+theme_override_fonts/font = ExtResource("5_2ghn5")
+theme_override_font_sizes/font_size = 56
+text = "MUSIC
+"
+
+[node name="MusicVolume" type="HSlider" parent="sliders/Music_label"]
+layout_mode = 0
+offset_left = -160.0
+offset_top = 72.0
+offset_right = 280.0
+offset_bottom = 88.0
+min_value = -50.0
+max_value = 0.0
+
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
+[connection signal="value_changed" from="sliders/Master_label/MasterVolume" to="." method="_on_master_volume_value_changed"]
+[connection signal="value_changed" from="sliders/Master_label/MasterVolume" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="sliders/Music_label/MusicVolume" to="." method="_on_music_volume_value_changed"]
