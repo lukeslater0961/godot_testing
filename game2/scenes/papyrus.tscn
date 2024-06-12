@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bchm5cn5y0i8w"]
+
+[ext_resource type="Texture2D" uid="uid://b5qew6vfq1rix" path="res://assets/Sprites/papyrus_sprite_sheet.png" id="1_ijkc7"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(592, 232)
+scale = Vector2(1.78, 1.70755)
+texture = ExtResource("1_ijkc7")
+region_enabled = true
+region_rect = Rect2(352, 20, 75, 106)

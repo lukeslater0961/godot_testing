@@ -1,10 +1,54 @@
-[gd_scene load_steps=3 format=3 uid="uid://blvh14lx7458j"]
+[gd_scene load_steps=5 format=3 uid="uid://blvh14lx7458j"]
 
-[ext_resource type="Script" path="res://scenes/game.gd" id="1_h01pn"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_h01pn"]
 [ext_resource type="PackedScene" uid="uid://ca6bwqhpopenf" path="res://scenes/fade_transition.tscn" id="1_iy7d1"]
+[ext_resource type="PackedScene" uid="uid://bchm5cn5y0i8w" path="res://scenes/papyrus.tscn" id="3_ox44d"]
+[ext_resource type="FontFile" uid="uid://p63ukbvo7s51" path="res://assets/Fonts/DeterminationSansWebRegular-369X.ttf" id="4_1w1yb"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_h01pn")
 
 [node name="fade_transition" parent="." instance=ExtResource("1_iy7d1")]
 visible = false
+
+[node name="Area2D" parent="." instance=ExtResource("3_ox44d")]
+position = Vector2(-8, -72)
+
+[node name="Button_controller" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="labels" type="Node" parent="."]
+
+[node name="health levels" type="Label" parent="labels"]
+offset_left = 620.0
+offset_top = 456.0
+offset_right = 737.0
+offset_bottom = 486.0
+theme_override_fonts/font = ExtResource("4_1w1yb")
+theme_override_font_sizes/font_size = 29
+text = "NULL/NULL
+"
+
+[node name="player name" type="Label" parent="labels"]
+offset_left = 332.0
+offset_top = 456.0
+offset_right = 449.0
+offset_bottom = 519.0
+theme_override_fonts/font = ExtResource("4_1w1yb")
+theme_override_font_sizes/font_size = 29
+text = "Tester
+
+"
+
+[node name="hp" type="Label" parent="labels"]
+offset_left = 484.0
+offset_top = 448.0
+offset_right = 510.0
+offset_bottom = 478.0
+theme_override_fonts/font = ExtResource("4_1w1yb")
+theme_override_font_sizes/font_size = 29
+text = "HP
+"
