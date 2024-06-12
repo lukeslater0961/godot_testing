@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s3dp8xglp11x"
-path="res://.godot/imported/Quit.png-4c889a7d21da70a153608aab5dc6b2d5.ctex"
+uid="uid://rxbjouhc6ffn"
+path="res://.godot/imported/Undertale_title.png-1704a8f91f39a21aac0cb5bbe5f17669.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Quit.png"
-dest_files=["res://.godot/imported/Quit.png-4c889a7d21da70a153608aab5dc6b2d5.ctex"]
+source_file="res://assets/Menu Textures/Undertale_title.png"
+dest_files=["res://.godot/imported/Undertale_title.png-1704a8f91f39a21aac0cb5bbe5f17669.ctex"]
 
 [params]
 

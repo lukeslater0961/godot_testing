@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://p63ukbvo7s51"
-path="res://.godot/imported/DeterminationSansWebRegular-369X.ttf-cc31848c4dc1f95047430ec5c0f928c8.fontdata"
+uid="uid://cahyiaehh3ahn"
+path="res://.godot/imported/HachicroUndertaleBattleFontRegular-L3zlg.ttf-d5c553595042b6b8ccf53d588ca63c8a.fontdata"
 
 [deps]
 
-source_file="res://assets/DeterminationSansWebRegular-369X.ttf"
-dest_files=["res://.godot/imported/DeterminationSansWebRegular-369X.ttf-cc31848c4dc1f95047430ec5c0f928c8.fontdata"]
+source_file="res://assets/Fonts/HachicroUndertaleBattleFontRegular-L3zlg.ttf"
+dest_files=["res://.godot/imported/HachicroUndertaleBattleFontRegular-L3zlg.ttf-d5c553595042b6b8ccf53d588ca63c8a.fontdata"]
 
 [params]
 

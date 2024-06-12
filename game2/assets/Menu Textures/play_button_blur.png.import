@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rxbjouhc6ffn"
-path="res://.godot/imported/Undertale_title.png-ec1666ea816face7d9e4d4e787fc71b8.ctex"
+uid="uid://blwt31rnqjou1"
+path="res://.godot/imported/play_button_blur.png-5817ea02bac13aef95c0aa4d105418a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Undertale_title.png"
-dest_files=["res://.godot/imported/Undertale_title.png-ec1666ea816face7d9e4d4e787fc71b8.ctex"]
+source_file="res://assets/Menu Textures/play_button_blur.png"
+dest_files=["res://.godot/imported/play_button_blur.png-5817ea02bac13aef95c0aa4d105418a4.ctex"]
 
 [params]
 

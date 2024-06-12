@@ -1,11 +1,10 @@
-[gd_scene format=3 uid="uid://blvh14lx7458j"]
+[gd_scene load_steps=3 format=3 uid="uid://blvh14lx7458j"]
+
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_h01pn"]
+[ext_resource type="PackedScene" uid="uid://ca6bwqhpopenf" path="res://scenes/fade_transition.tscn" id="1_iy7d1"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_h01pn")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 334.0
-offset_top = 177.0
-offset_right = 642.0
-offset_bottom = 291.0
-text = "BITCH
-"
+[node name="fade_transition" parent="." instance=ExtResource("1_iy7d1")]
+visible = false

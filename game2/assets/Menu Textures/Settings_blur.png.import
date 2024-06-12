@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv41fvj6fm67k"
-path="res://.godot/imported/Settings_blur.png-527dc96e1e3cf5f1e1f60839a534fc45.ctex"
+path="res://.godot/imported/Settings_blur.png-96a08e85901c2c7dc6ba96e74ecca603.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Settings_blur.png"
-dest_files=["res://.godot/imported/Settings_blur.png-527dc96e1e3cf5f1e1f60839a534fc45.ctex"]
+source_file="res://assets/Menu Textures/Settings_blur.png"
+dest_files=["res://.godot/imported/Settings_blur.png-96a08e85901c2c7dc6ba96e74ecca603.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5qew6vfq1rix"
-path="res://.godot/imported/papyrus_sprite_sheet.png-0f3db9667ef06cfc1a8547a519b848cd.ctex"
+uid="uid://bnq861ajcslrf"
+path="res://.godot/imported/bones_sprite_sheet.png-fe3461838aa27f529d199423d4e72677.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/papyrus_sprite_sheet.png"
-dest_files=["res://.godot/imported/papyrus_sprite_sheet.png-0f3db9667ef06cfc1a8547a519b848cd.ctex"]
+source_file="res://assets/Sprites/bones_sprite_sheet.png"
+dest_files=["res://.godot/imported/bones_sprite_sheet.png-fe3461838aa27f529d199423d4e72677.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjlojnd4bbaqn"
-path="res://.godot/imported/undertale_custom_fight_menus__free_to_use__by_metr0nix727_dda96m7.png-1596ef599852f31f2ad1eecb6b7770c8.ctex"
+uid="uid://biisyhonvk8wt"
+path="res://.godot/imported/Undertale.png-dbd43baa87893d3768f8545fc73dd7c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/undertale_custom_fight_menus__free_to_use__by_metr0nix727_dda96m7.png"
-dest_files=["res://.godot/imported/undertale_custom_fight_menus__free_to_use__by_metr0nix727_dda96m7.png-1596ef599852f31f2ad1eecb6b7770c8.ctex"]
+source_file="res://assets/Sprites/Undertale.png"
+dest_files=["res://.godot/imported/Undertale.png-dbd43baa87893d3768f8545fc73dd7c7.ctex"]
 
 [params]
 

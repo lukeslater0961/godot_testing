@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biisyhonvk8wt"
-path="res://.godot/imported/Undertale.png-4412f317018b26239a66935a5166948c.ctex"
+uid="uid://ce3ihn7r7tuoh"
+path="res://.godot/imported/all_characters_sprite_sheet.png-2101d1a095303af0e630839ac654aaed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Undertale.png"
-dest_files=["res://.godot/imported/Undertale.png-4412f317018b26239a66935a5166948c.ctex"]
+source_file="res://assets/Sprites/all_characters_sprite_sheet.png"
+dest_files=["res://.godot/imported/all_characters_sprite_sheet.png-2101d1a095303af0e630839ac654aaed.ctex"]
 
 [params]
 

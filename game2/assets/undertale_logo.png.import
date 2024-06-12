@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcp0k0wg0femg"
-path="res://.godot/imported/dialogue_box.png-2916d81251618e4563ebda55c6bbca26.ctex"
+uid="uid://7nemoahrw5si"
+path="res://.godot/imported/undertale_logo.png-d834580de77bad3859c3cfb6cafa5325.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dialogue_box.png"
-dest_files=["res://.godot/imported/dialogue_box.png-2916d81251618e4563ebda55c6bbca26.ctex"]
+source_file="res://assets/undertale_logo.png"
+dest_files=["res://.godot/imported/undertale_logo.png-d834580de77bad3859c3cfb6cafa5325.ctex"]
 
 [params]
 
