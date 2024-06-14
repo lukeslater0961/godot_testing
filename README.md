@@ -7,6 +7,7 @@ Welcome to the repository where I stash my initial games and projects developed 
 Here is a list of some projects you'll find in this repository:
 
 1.**Platformer Prototype**: A simple platformer game to experiment with physics, collisions, and character movement.
+
 2.**In Progress**
 
 Each project is contained within its own directory with all the necessary assets, scripts, and scenes.
