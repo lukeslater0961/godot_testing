@@ -7,4 +7,8 @@ func _on_music_volume_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), value)
 
 func _on_quit_pressed():
-	get_tree().change_scene_to_file("res://scenes/main_menu.tscn");
+	get_tree().change_scene_to_file(Globals.prev_scene);
+
+func _input(event):
+	if event.is_action_pressed("escape"):
+		get_tree().change_scene_to_file(Globals.prev_scene)

@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://blvh14lx7458j"]
+[gd_scene load_steps=7 format=3 uid="uid://blvh14lx7458j"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_h01pn"]
 [ext_resource type="PackedScene" uid="uid://ca6bwqhpopenf" path="res://scenes/fade_transition.tscn" id="1_iy7d1"]
 [ext_resource type="PackedScene" uid="uid://bchm5cn5y0i8w" path="res://scenes/papyrus.tscn" id="3_ox44d"]
 [ext_resource type="FontFile" uid="uid://p63ukbvo7s51" path="res://assets/Fonts/DeterminationSansWebRegular-369X.ttf" id="4_1w1yb"]
+[ext_resource type="Texture2D" uid="uid://ckt7k0l32gjee" path="res://assets/Menu Textures/gear_icon.png" id="4_87ipe"]
+[ext_resource type="PackedScene" uid="uid://mbgelcytxfe4" path="res://scenes/dialog.tscn" id="6_rpkfw"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_h01pn")
@@ -19,6 +21,12 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Options" type="TextureButton" parent="Button_controller"]
+layout_mode = 0
+offset_right = 496.0
+offset_bottom = 544.0
+texture_normal = ExtResource("4_87ipe")
 
 [node name="labels" type="Node" parent="."]
 
@@ -52,3 +60,9 @@ theme_override_fonts/font = ExtResource("4_1w1yb")
 theme_override_font_sizes/font_size = 29
 text = "HP
 "
+
+[node name="Area2D2" parent="." instance=ExtResource("6_rpkfw")]
+position = Vector2(0, -136)
+scale = Vector2(1.07363, 1.07374)
+
+[connection signal="pressed" from="Button_controller/Options" to="." method="_on_options_pressed"]
