@@ -47,7 +47,7 @@ offset_left = -120.0
 offset_top = 50.0
 offset_right = 320.0
 offset_bottom = 77.0
-min_value = -50.0
+min_value = -28.0
 max_value = 0.0
 
 [node name="Music_label" type="Label" parent="sliders"]
@@ -66,7 +66,7 @@ offset_left = -160.0
 offset_top = 72.0
 offset_right = 280.0
 offset_bottom = 88.0
-min_value = -50.0
+min_value = -28.0
 max_value = 0.0
 
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]

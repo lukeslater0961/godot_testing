@@ -28,16 +28,6 @@ offset_right = 33.0
 offset_bottom = 37.0
 texture_normal = ExtResource("4_87ipe")
 
-[node name="Label" type="Label" parent="Button_controller/Options"]
-layout_mode = 0
-offset_left = 33.0
-offset_top = 2.0
-offset_right = 46.0
-offset_bottom = 34.0
-theme_override_fonts/font = ExtResource("4_1w1yb")
-theme_override_font_sizes/font_size = 30
-text = "CTRL + P"
-
 [node name="labels" type="Node" parent="."]
 
 [node name="health levels" type="Label" parent="labels"]
@@ -71,15 +61,6 @@ theme_override_font_sizes/font_size = 29
 text = "HP
 "
 
-[node name="Madeby" type="Label" parent="labels"]
-offset_left = 1053.0
-offset_top = 630.0
-offset_right = 1152.0
-offset_bottom = 647.0
-theme_override_fonts/font = ExtResource("4_1w1yb")
-theme_override_font_sizes/font_size = 15
-text = "made by @lslater"
-
 [node name="Papyrus" parent="." instance=ExtResource("3_ox44d")]
 position = Vector2(-8, -72)
 
@@ -88,8 +69,7 @@ position = Vector2(574, 356.5)
 scale = Vector2(0.746154, 0.726923)
 texture = ExtResource("2_hmwe4")
 
-[node name="Red_heart" parent="." instance=ExtResource("7_j7ofg")]
-visible = false
+[node name="CharacterBody2D" parent="." instance=ExtResource("7_j7ofg")]
 position = Vector2(574, 360)
 
 [connection signal="pressed" from="Button_controller/Options" to="." method="_on_options_pressed"]

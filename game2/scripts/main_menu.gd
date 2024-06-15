@@ -4,6 +4,7 @@ var	button_type = null;
 
 func _ready():
 	Globals.prev_scene = get_tree().current_scene.scene_file_path
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _on_start_pressed():
 	button_type = "Start"

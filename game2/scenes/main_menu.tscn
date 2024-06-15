@@ -89,6 +89,6 @@ visible = false
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Button_manager/About" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/About" to="." method="_on_about_pressed"]
+[connection signal="pressed" from="Button_manager/About" to="." method="_on_start_pressed"]
 [connection signal="timeout" from="fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
