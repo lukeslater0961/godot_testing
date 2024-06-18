@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6y38vcsddq68"
-path="res://.godot/imported/game_frame.png.png-a4447093e6b08a65d0038721fb78cbba.ctex"
+uid="uid://mdjypcwcnx7f"
+path="res://.godot/imported/rectangle.png-45a19e7577ab8c81019014beff73d6de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Menu Textures/game_frame.png.png"
-dest_files=["res://.godot/imported/game_frame.png.png-a4447093e6b08a65d0038721fb78cbba.ctex"]
+source_file="res://assets/Sprites/rectangle.png"
+dest_files=["res://.godot/imported/rectangle.png-45a19e7577ab8c81019014beff73d6de.ctex"]
 
 [params]
 

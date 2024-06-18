@@ -1,19 +1,38 @@
 [gd_scene load_steps=4 format=3 uid="uid://bguuatjbmx4hr"]
 
-[ext_resource type="Script" path="res://scenes/Red_heart.gd" id="1_bk7gh"]
 [ext_resource type="Texture2D" uid="uid://biisyhonvk8wt" path="res://assets/Sprites/Undertale.png" id="1_xbgfj"]
+
+[sub_resource type="GDScript" id="GDScript_05ivb"]
+script/source = "extends CharacterBody2D
+
+const SPEED = 200.0
+
+func _physics_process(delta):
+	var direction_x = Input.get_axis(\"Move_left\", \"Move_right\")
+	var direction_y = Input.get_axis(\"Move_up\", \"Move_down\")
+	
+	if direction_x:
+		velocity.x = direction_x * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	if direction_y:
+		velocity.y = direction_y * SPEED
+	else:
+		velocity.y = move_toward(velocity.y, 0, SPEED)
+	move_and_slide()
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_77hc8"]
 radius = 8.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(608, 352)
-script = ExtResource("1_bk7gh")
+script = SubResource("GDScript_05ivb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0109374, 0.0110156)
+texture = ExtResource("1_xbgfj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_77hc8")
-
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(-2.67029e-05, 7.62939e-06)
-scale = Vector2(0.0109374, 0.0110156)
-texture = ExtResource("1_xbgfj")

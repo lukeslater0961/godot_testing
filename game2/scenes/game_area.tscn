@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://75n6fkktbrja"]
+
+[ext_resource type="Texture2D" uid="uid://75mqot3lmf5c" path="res://assets/Menu Textures/New Piskel-1.png (2).png" id="1_ygafh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqlfn"]
+size = Vector2(68, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tarwf"]
+size = Vector2(10, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qygvv"]
+size = Vector2(10, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pd7a"]
+size = Vector2(68, 10)
+
+[sub_resource type="Gradient" id="Gradient_8j7ck"]
+offsets = PackedFloat32Array(0, 0.0454546)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_uc46u"]
+gradient = SubResource("Gradient_8j7ck")
+
+[node name="Node2D" type="StaticBody2D"]
+scale = Vector2(3, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(24, -5)
+shape = SubResource("RectangleShape2D_qqlfn")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-5, 23)
+shape = SubResource("RectangleShape2D_tarwf")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(53, 23)
+shape = SubResource("RectangleShape2D_qygvv")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(24, 51)
+shape = SubResource("RectangleShape2D_3pd7a")
+
+[node name="NewPiskel-1_png(2)" type="Sprite2D" parent="."]
+position = Vector2(24, 23)
+scale = Vector2(0.189744, 0.182051)
+texture = ExtResource("1_ygafh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-130.583, 22.8333)
+scale = Vector2(1.01497, 67.6667)
+texture = SubResource("GradientTexture1D_uc46u")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(280.378, 23.0266)
+scale = Vector2(-1.80975, 66.4428)
+texture = SubResource("GradientTexture1D_uc46u")

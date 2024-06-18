@@ -12,3 +12,4 @@ func _on_quit_pressed():
 func _input(event):
 	if event.is_action_pressed("escape"):
 		get_tree().change_scene_to_file(Globals.prev_scene)
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)

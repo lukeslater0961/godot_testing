@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://btvurdtowism0"]
+[gd_scene load_steps=14 format=3 uid="uid://btvurdtowism0"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_xla4c"]
 [ext_resource type="AudioStream" uid="uid://cgjnnyb05mbj" path="res://assets/menu_song.mp3" id="2_3kesj"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://cv41fvj6fm67k" path="res://assets/Menu Textures/Settings_blur.png" id="5_pnf71"]
 [ext_resource type="Texture2D" uid="uid://s3dp8xglp11x" path="res://assets/Menu Textures/Quit.png" id="6_vcdvj"]
 [ext_resource type="Texture2D" uid="uid://chgs4shyx062a" path="res://assets/Menu Textures/About.png" id="7_s870f"]
+[ext_resource type="Texture2D" uid="uid://dv1marlv4q58" path="res://assets/Menu Textures/how_to_play.png" id="8_eijj5"]
+[ext_resource type="Texture2D" uid="uid://bgewo0e0vqgwp" path="res://assets/Menu Textures/How_to_play_blur.png" id="9_2nijq"]
 [ext_resource type="FontFile" uid="uid://p63ukbvo7s51" path="res://assets/Fonts/DeterminationSansWebRegular-369X.ttf" id="9_ng0cr"]
 [ext_resource type="PackedScene" uid="uid://ca6bwqhpopenf" path="res://scenes/fade_transition.tscn" id="11_0uerq"]
 
@@ -57,6 +59,14 @@ offset_right = 129.0
 offset_bottom = 649.0
 texture_normal = ExtResource("7_s870f")
 
+[node name="TextureButton" type="TextureButton" parent="Button_manager"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 292.0
+offset_bottom = 37.0
+texture_normal = ExtResource("8_eijj5")
+texture_pressed = ExtResource("9_2nijq")
+
 [node name="Menu music" type="AudioStreamPlayer2D" parent="."]
 visible = false
 stream = ExtResource("2_3kesj")
@@ -89,6 +99,6 @@ visible = false
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Button_manager/About" to="." method="_on_about_pressed"]
 [connection signal="pressed" from="Button_manager/About" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/About" to="." method="_on_about_pressed"]
 [connection signal="timeout" from="fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

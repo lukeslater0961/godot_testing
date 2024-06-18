@@ -1,15 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://blvh14lx7458j"]
+[gd_scene load_steps=9 format=3 uid="uid://blvh14lx7458j"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_h01pn"]
 [ext_resource type="PackedScene" uid="uid://ca6bwqhpopenf" path="res://scenes/fade_transition.tscn" id="1_iy7d1"]
-[ext_resource type="Texture2D" uid="uid://75mqot3lmf5c" path="res://assets/Menu Textures/New Piskel-1.png (2).png" id="2_hmwe4"]
 [ext_resource type="PackedScene" uid="uid://bchm5cn5y0i8w" path="res://scenes/papyrus.tscn" id="3_ox44d"]
 [ext_resource type="FontFile" uid="uid://p63ukbvo7s51" path="res://assets/Fonts/DeterminationSansWebRegular-369X.ttf" id="4_1w1yb"]
 [ext_resource type="Texture2D" uid="uid://ckt7k0l32gjee" path="res://assets/Menu Textures/gear_icon.png" id="4_87ipe"]
+[ext_resource type="PackedScene" uid="uid://75n6fkktbrja" path="res://scenes/game_area.tscn" id="7_bb73n"]
 [ext_resource type="PackedScene" uid="uid://bguuatjbmx4hr" path="res://scenes/Red_heart.tscn" id="7_j7ofg"]
+[ext_resource type="AudioStream" uid="uid://cpwgpl3yjgyl2" path="res://assets/Undertale - Papyrus Theme Song.mp3" id="8_jlors"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_h01pn")
+
+[node name="Red_heart" parent="." instance=ExtResource("7_j7ofg")]
+visible = false
+position = Vector2(574, 360)
+
+[node name="Papyrus" parent="." instance=ExtResource("3_ox44d")]
+position = Vector2(-8, -72)
 
 [node name="fade_transition" parent="." instance=ExtResource("1_iy7d1")]
 visible = false
@@ -80,16 +88,11 @@ theme_override_fonts/font = ExtResource("4_1w1yb")
 theme_override_font_sizes/font_size = 15
 text = "made by @lslater"
 
-[node name="Papyrus" parent="." instance=ExtResource("3_ox44d")]
-position = Vector2(-8, -72)
+[node name="game_area" parent="." instance=ExtResource("7_bb73n")]
+position = Vector2(500, 287)
 
-[node name="main_frame" type="Sprite2D" parent="."]
-position = Vector2(574, 356.5)
-scale = Vector2(0.746154, 0.726923)
-texture = ExtResource("2_hmwe4")
-
-[node name="Red_heart" parent="." instance=ExtResource("7_j7ofg")]
-visible = false
-position = Vector2(574, 360)
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_jlors")
+bus = &"Music"
 
 [connection signal="pressed" from="Button_controller/Options" to="." method="_on_options_pressed"]
