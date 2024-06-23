@@ -59,7 +59,7 @@ offset_right = 129.0
 offset_bottom = 649.0
 texture_normal = ExtResource("7_s870f")
 
-[node name="TextureButton" type="TextureButton" parent="Button_manager"]
+[node name="How_to" type="TextureButton" parent="Button_manager"]
 layout_mode = 0
 offset_top = 1.0
 offset_right = 292.0
@@ -99,6 +99,7 @@ visible = false
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Button_manager/About" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/About" to="." method="_on_about_pressed"]
+[connection signal="pressed" from="Button_manager/About" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/How_to" to="." method="_on_how_to_pressed"]
 [connection signal="timeout" from="fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

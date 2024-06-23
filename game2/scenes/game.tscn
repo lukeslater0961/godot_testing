@@ -89,7 +89,7 @@ theme_override_font_sizes/font_size = 15
 text = "made by @lslater"
 
 [node name="game_area" parent="." instance=ExtResource("7_bb73n")]
-position = Vector2(500, 287)
+position = Vector2(536, 286)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_jlors")

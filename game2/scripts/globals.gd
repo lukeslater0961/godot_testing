@@ -7,4 +7,3 @@ func _show_node(node: Node2D): #to be used to make a node appear
 
 func _hide_node(node: Node2D): #to be used to make a node disappear
 	node.hide()
-	
