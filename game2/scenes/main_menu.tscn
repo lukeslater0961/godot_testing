@@ -1,9 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://btvurdtowism0"]
+[gd_scene load_steps=13 format=3 uid="uid://btvurdtowism0"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_xla4c"]
 [ext_resource type="AudioStream" uid="uid://cgjnnyb05mbj" path="res://assets/menu_song.mp3" id="2_3kesj"]
 [ext_resource type="Texture2D" uid="uid://bb3rhnjhuedr2" path="res://assets/Menu Textures/Play_button.png" id="2_kuxlo"]
-[ext_resource type="Texture2D" uid="uid://rxbjouhc6ffn" path="res://assets/Menu Textures/Undertale_title.png" id="3_3qg2n"]
 [ext_resource type="Texture2D" uid="uid://blwt31rnqjou1" path="res://assets/Menu Textures/play_button_blur.png" id="3_6j2sr"]
 [ext_resource type="Texture2D" uid="uid://bem48x0dp1bgc" path="res://assets/Menu Textures/Settings.png" id="4_bvrrq"]
 [ext_resource type="Texture2D" uid="uid://cv41fvj6fm67k" path="res://assets/Menu Textures/Settings_blur.png" id="5_pnf71"]
@@ -73,16 +72,16 @@ stream = ExtResource("2_3kesj")
 autoplay = true
 bus = &"Music"
 
-[node name="Menu Text" type="Area2D" parent="."]
-visible = false
-
-[node name="Sprite2D" type="Sprite2D" parent="Menu Text"]
-visible = false
-position = Vector2(990, 354.375)
-scale = Vector2(0.514, 0.526397)
-texture = ExtResource("3_3qg2n")
-
 [node name="Madeby" type="Label" parent="."]
+offset_left = 1053.0
+offset_top = 630.0
+offset_right = 1152.0
+offset_bottom = 647.0
+theme_override_fonts/font = ExtResource("9_ng0cr")
+theme_override_font_sizes/font_size = 15
+text = "made by @lslater"
+
+[node name="Madeby2" type="Label" parent="."]
 offset_left = 1053.0
 offset_top = 630.0
 offset_right = 1152.0
@@ -99,7 +98,7 @@ visible = false
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Button_manager/About" to="." method="_on_about_pressed"]
 [connection signal="pressed" from="Button_manager/About" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/About" to="." method="_on_about_pressed"]
 [connection signal="pressed" from="Button_manager/How_to" to="." method="_on_how_to_pressed"]
 [connection signal="timeout" from="fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

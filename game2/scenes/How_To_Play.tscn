@@ -1,0 +1,154 @@
+[gd_scene load_steps=10 format=3 uid="uid://0hhpk8e08i7u"]
+
+[ext_resource type="Script" path="res://scripts/How_To_Play.gd" id="1_tm8yn"]
+[ext_resource type="Texture2D" uid="uid://biisyhonvk8wt" path="res://assets/Sprites/Undertale.png" id="2_bog5b"]
+[ext_resource type="FontFile" uid="uid://p63ukbvo7s51" path="res://assets/Fonts/DeterminationSansWebRegular-369X.ttf" id="3_14xw5"]
+[ext_resource type="Texture2D" uid="uid://s3dp8xglp11x" path="res://assets/Menu Textures/Quit.png" id="4_fdh35"]
+[ext_resource type="Texture2D" uid="uid://b5qew6vfq1rix" path="res://assets/Sprites/papyrus_sprite_sheet.png" id="5_78f54"]
+[ext_resource type="Texture2D" uid="uid://bnq861ajcslrf" path="res://assets/Sprites/bones_sprite_sheet.png" id="6_3hs43"]
+
+[sub_resource type="Animation" id="Animation_p643a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6vd6g"]
+resource_name = "turning_head"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [6.28319, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b56t8"]
+_data = {
+"RESET": SubResource("Animation_p643a"),
+"turning_head": SubResource("Animation_6vd6g")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tm8yn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(232, 248)
+scale = Vector2(0.07, 0.066)
+texture = ExtResource("2_bog5b")
+
+[node name="movement_labels" type="Node" parent="."]
+
+[node name="Move_up" type="Label" parent="movement_labels"]
+offset_left = 351.0
+offset_top = 200.0
+offset_right = 457.0
+offset_bottom = 228.0
+theme_override_fonts/font = ExtResource("3_14xw5")
+theme_override_font_sizes/font_size = 26
+text = "W or ↑ :  Move up"
+
+[node name="Move_down" type="Label" parent="movement_labels"]
+offset_left = 352.0
+offset_top = 272.0
+offset_right = 475.0
+offset_bottom = 300.0
+theme_override_fonts/font = ExtResource("3_14xw5")
+theme_override_font_sizes/font_size = 26
+text = "S  or ↓ : Move Down
+"
+
+[node name="Move_left" type="Label" parent="movement_labels"]
+offset_left = 120.0
+offset_top = 104.0
+offset_right = 215.0
+offset_bottom = 163.0
+theme_override_fonts/font = ExtResource("3_14xw5")
+theme_override_font_sizes/font_size = 26
+text = "Move left
+	    A or ←
+"
+
+[node name="Move_right" type="Label" parent="movement_labels"]
+offset_left = 256.0
+offset_top = 104.0
+offset_right = 362.0
+offset_bottom = 163.0
+theme_override_fonts/font = ExtResource("3_14xw5")
+theme_override_font_sizes/font_size = 26
+text = "Move right
+      D or →"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Quit" type="TextureButton" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 27.575
+anchor_top = 0.025
+anchor_right = 28.825
+anchor_bottom = 1.35
+grow_horizontal = 0
+texture_normal = ExtResource("4_fdh35")
+metadata/_edit_use_anchors_ = true
+
+[node name="papyrus_decoration" type="Sprite2D" parent="."]
+position = Vector2(32, 640)
+rotation = 0.632795
+scale = Vector2(2.20492, 2.1)
+texture = ExtResource("5_78f54")
+region_enabled = true
+region_rect = Rect2(16, 287, 61, 81)
+
+[node name="Sprite2D" type="Sprite2D" parent="papyrus_decoration"]
+position = Vector2(-6.04881, -47.3088)
+texture = ExtResource("5_78f54")
+region_enabled = true
+region_rect = Rect2(139, 41, 24, 33)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="papyrus_decoration/Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_b56t8")
+}
+autoplay = "turning_head"
+
+[node name="Info" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Info"]
+offset_left = 712.0
+offset_top = 512.0
+offset_right = 1030.0
+offset_bottom = 571.0
+theme_override_fonts/font = ExtResource("3_14xw5")
+theme_override_font_sizes/font_size = 26
+text = "Dodge the bones to beat
+ papyrus and finish the game "
+
+[node name="bone" type="Sprite2D" parent="Info/Label"]
+position = Vector2(352, 8)
+scale = Vector2(3.57692, 4.19231)
+texture = ExtResource("6_3hs43")
+region_enabled = true
+region_rect = Rect2(6, 6, 13, 26)
+
+[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]

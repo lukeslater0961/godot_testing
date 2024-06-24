@@ -54,8 +54,8 @@ scale = Vector2(0.282052, 0.182051)
 texture = ExtResource("1_ygafh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-154.916, 22.8333)
-scale = Vector2(1.01497, 67.6667)
+position = Vector2(-241.333, 22.8333)
+scale = Vector2(1.69271, 67.6667)
 texture = SubResource("GradientTexture1D_uc46u")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]

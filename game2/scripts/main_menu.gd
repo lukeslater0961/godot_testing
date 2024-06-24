@@ -24,7 +24,7 @@ func _on_quit_pressed():
 	get_tree().quit()
 
 func _on_how_to_pressed():
-	get_tree().change_scene_to_file("res://How_To_Play.tscn")
+	get_tree().change_scene_to_file("res://scenes/How_To_Play.tscn")
 
 func _on_fade_timer_timeout():
 	if button_type == "Start" :

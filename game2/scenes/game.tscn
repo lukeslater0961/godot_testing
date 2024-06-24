@@ -13,7 +13,6 @@
 script = ExtResource("1_h01pn")
 
 [node name="Red_heart" parent="." instance=ExtResource("7_j7ofg")]
-visible = false
 position = Vector2(574, 360)
 
 [node name="Papyrus" parent="." instance=ExtResource("3_ox44d")]
