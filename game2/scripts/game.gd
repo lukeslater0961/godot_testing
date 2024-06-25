@@ -29,7 +29,9 @@ func Setup():
 	Start()
 
 func Start():
-	Globals._show_node(red_heart)
+	Globals._show_node(red_heart, 574, 360)
+	red_heart.position.x = 574
+	red_heart.position.y = 360
 	audio_stream_player_2d.play()
 	Globals._add_bone()
 

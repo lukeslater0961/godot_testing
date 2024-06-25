@@ -70,6 +70,6 @@ min_value = -28.0
 max_value = 0.0
 
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
-[connection signal="value_changed" from="sliders/Master_label/MasterVolume" to="." method="_on_master_volume_value_changed"]
 [connection signal="value_changed" from="sliders/Master_label/MasterVolume" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="sliders/Master_label/MasterVolume" to="." method="_on_master_volume_value_changed"]
 [connection signal="value_changed" from="sliders/Music_label/MusicVolume" to="." method="_on_music_volume_value_changed"]
