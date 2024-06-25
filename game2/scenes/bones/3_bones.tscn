@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4e7pbokr0v7l"]
+
+[ext_resource type="PackedScene" uid="uid://cn5unssn4yfdl" path="res://scenes/bones/single_bone.tscn" id="1_wsl0f"]
+[ext_resource type="PackedScene" uid="uid://ismrk17skkvw" path="res://scenes/bones/medium_bone.tscn" id="2_6licn"]
+
+[node name="3_bones" type="Node2D"]
+
+[node name="Area2D" parent="." instance=ExtResource("1_wsl0f")]
+position = Vector2(0, -13)
+
+[node name="Area2D2" parent="." instance=ExtResource("1_wsl0f")]
+position = Vector2(64, -18)
+scale = Vector2(1.017, 1.4)
+
+[node name="Area2D3" parent="." instance=ExtResource("2_6licn")]
+position = Vector2(128, -20)

@@ -22,7 +22,7 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 gradient = SubResource("Gradient_8j7ck")
 
 [node name="Node2D" type="StaticBody2D"]
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -33,7 +33,7 @@ shape = SubResource("RectangleShape2D_qqlfn")
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-28.6667, 23)
+position = Vector2(-28.75, 23)
 shape = SubResource("RectangleShape2D_tarwf")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
