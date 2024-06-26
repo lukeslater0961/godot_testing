@@ -18,7 +18,7 @@ To get started with any of the projects in this repository, you'll need to have 
 
 ### Prerequisites
 
-- [Godot Engine](https://godotengine.org/download) (version 3.x or 4.x)
+- [Godot Engine](https://godotengine.org/download) (version= 4)
 - A code editor (optional, but recommended) such as [VSCode](https://code.visualstudio.com/) (take into account that Godot has its own integrated code editor)
 
 ## Installation
@@ -29,6 +29,6 @@ To get started with any of the projects in this repository, you'll need to have 
 2. Now you have **2** choices
    * You can go into the **exported_games** folder and unzip the game folder you want to test and just play it
 
-     If you are on linux, for the build you must chmod +x on the binary file before opening it:D
+     If you are on linux, for the build you must chmod +x on the binary file before executing it:D
    * You can open the project by going straight into the **game n** folder and importing the godot file into godot
       
