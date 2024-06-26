@@ -6,10 +6,10 @@
 [node name="3_bones" type="Node2D"]
 
 [node name="Area2D" parent="." instance=ExtResource("1_wsl0f")]
-position = Vector2(0, -13)
+position = Vector2(0, -12)
 
 [node name="Area2D2" parent="." instance=ExtResource("1_wsl0f")]
-position = Vector2(64, -18)
+position = Vector2(64, -17)
 scale = Vector2(1.017, 1.4)
 
 [node name="Area2D3" parent="." instance=ExtResource("2_6licn")]

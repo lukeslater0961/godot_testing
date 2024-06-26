@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ismrk17skkvw"]
+[gd_scene load_steps=5 format=3 uid="uid://ismrk17skkvw"]
 
 [ext_resource type="Texture2D" uid="uid://bnq861ajcslrf" path="res://assets/Sprites/bones_sprite_sheet.png" id="1_kqio5"]
 [ext_resource type="Script" path="res://scripts/medium_bone.gd" id="1_ywttq"]
+[ext_resource type="AudioStream" uid="uid://c4wmkmc5lp87q" path="res://assets/snd-hurt1-101soundboards.mp3" id="3_8yhtc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsct0"]
 size = Vector2(10, 38)
@@ -16,3 +17,9 @@ shape = SubResource("RectangleShape2D_vsct0")
 texture = ExtResource("1_kqio5")
 region_enabled = true
 region_rect = Rect2(159, 37, 13, 41)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8yhtc")
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
