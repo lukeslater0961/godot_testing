@@ -11,8 +11,8 @@ func _show_node(node: Node2D, x: float , y: float): #to be used to make a node a
 func _hide_node(node: Node2D): #to be used to make a node disappear
 	node.hide()
 
-func _instantiate_object(str):
-	var object = load(str)
+func _instantiate_object(string):
+	var object = load(string)
 	var	object_instance = object.instantiate()
 	object_instance.position.y = 450
 	object_instance.position.x = 750

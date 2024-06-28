@@ -8,11 +8,10 @@ func _ready():
 	
 func _process(delta):
 	position.x -= (Speed * delta)
-	if position.x <= -320 or get_tree().get_current_scene().get_name() != "Game":
+	if position.x <= -320 or (get_tree().current_scene and get_tree().current_scene.name != "Game"):
 		queue_free()
 
 
-func _on_body_entered(body):
-	if body.name == "Red_heart":
+func _on_body_entered(_body):
 		audio_stream_player_2d.play()
 		Globals.current_health -= 1

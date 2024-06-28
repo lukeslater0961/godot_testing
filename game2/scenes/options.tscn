@@ -64,28 +64,28 @@ text = "MUSIC
 layout_mode = 0
 offset_left = -160.0
 offset_top = 72.0
-offset_right = 280.0
+offset_right = 287.0
 offset_bottom = 88.0
 scale = Vector2(0.984004, 1)
 min_value = -28.0
 max_value = 0.0
 
 [node name="SFX_label" type="Label" parent="sliders"]
-offset_left = 518.0
-offset_top = 335.0
-offset_right = 593.0
-offset_bottom = 393.0
+offset_left = 512.0
+offset_top = 352.0
+offset_right = 587.0
+offset_bottom = 410.0
 theme_override_fonts/font = ExtResource("5_2ghn5")
 theme_override_font_sizes/font_size = 56
 text = "SFX
 "
 
 [node name="SFXVolume" type="HSlider" parent="sliders/SFX_label"]
-layout_mode = 0
-offset_left = 30.0
-offset_top = 103.0
-offset_right = 38.0
-offset_bottom = 119.0
+offset_left = -184.0
+offset_top = 72.0
+offset_right = 263.0
+offset_bottom = 88.0
+scale = Vector2(0.984, 0.984)
 min_value = -28.0
 max_value = 0.0
 
@@ -93,4 +93,5 @@ max_value = 0.0
 [connection signal="value_changed" from="sliders/Master_label/MasterVolume" to="." method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="sliders/Master_label/MasterVolume" to="." method="_on_master_volume_value_changed"]
 [connection signal="value_changed" from="sliders/Music_label/MusicVolume" to="." method="_on_music_volume_value_changed"]
+[connection signal="value_changed" from="sliders/SFX_label/SFXVolume" to="." method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="sliders/SFX_label/SFXVolume" to="." method="_on_sfx_volume_value_changed"]

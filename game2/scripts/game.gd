@@ -22,6 +22,7 @@ func _ready():
 	Setup()
 
 func Setup():
+	Globals.current_health = 20	
 	Globals.prev_scene = get_tree().current_scene.scene_file_path #sets current scene global var 
 	health_levels.text = str(Globals.current_health)+ "/" + str(Globals.Max_health)
 	await get_tree().create_timer(1.5).timeout #waits for 1.5 seconds
@@ -37,5 +38,5 @@ func game_patterns():#loads the patterns
 	await get_tree().create_timer(8).timeout
 	Globals._instantiate_object("res://scenes/bones/3_bones_2_1.tscn")
 
-func _process(delta): # updates the health
+func _process(_delta): # updates the health
 	health_levels.text = str(Globals.current_health) + "/" + str(Globals.Max_health)
