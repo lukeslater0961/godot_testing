@@ -3,13 +3,17 @@ extends Node2D
 @onready var audio_stream_player_2d = $AudioStreamPlayer2D
 @onready var health_levels = $"labels/health levels"
 @onready var red_heart = $Red_heart
+@onready var timer = $labels/Timer
 
+var score = 0;
 
 func _input(event):
 	if event.is_action_pressed("options"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().change_scene_to_file("res://scenes/options.tscn")
 	elif event.is_action_pressed("escape"):
+		if (Globals.High_score <= score):
+			Globals.High_score = score
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 	elif event.is_action_pressed("full_quit"):
 		get_tree().quit()
@@ -24,13 +28,14 @@ func _ready():
 func Setup():
 	Globals.current_health = 20	
 	Globals.prev_scene = get_tree().current_scene.scene_file_path #sets current scene global var 
-	health_levels.text = str(Globals.current_health)+ "/" + str(Globals.Max_health)
+	health_levels.text = str(Globals.current_health)+ "/" + str(Globals.Max_health)#shows health
+	timer.text = "score :" + str(score)#shows score at 0
 	await get_tree().create_timer(1.5).timeout #waits for 1.5 seconds
 	Start()
 
 func Start():
 	Globals._show_node(red_heart, 574, 360)
-	audio_stream_player_2d.play()
+	audio_stream_player_2d.play()#starts 
 	game_patterns()
 
 func game_patterns():#loads the patterns
@@ -38,5 +43,8 @@ func game_patterns():#loads the patterns
 	await get_tree().create_timer(8).timeout
 	Globals._instantiate_object("res://scenes/bones/3_bones_2_1.tscn")
 
-func _process(_delta): # updates the health
+func _process(delta : float): # updates the health
+	await get_tree().create_timer(1.5).timeout
+	score += delta
+	timer.text = "score :" + str("%.1f" % score) + " s"
 	health_levels.text = str(Globals.current_health) + "/" + str(Globals.Max_health)

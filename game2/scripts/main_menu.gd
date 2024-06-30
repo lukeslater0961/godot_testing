@@ -1,10 +1,12 @@
 extends Node2D
 
 var	button_type = null;
+@onready var high_score = $labels/High_score
 
 func _ready():
 	Globals.prev_scene = get_tree().current_scene.scene_file_path
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	high_score.text = "High score = " + str("%.1f" % Globals.High_score) + " s"
 
 func _input(event):
 	if event.is_action_pressed("escape") :
@@ -19,7 +21,6 @@ func _on_start_pressed():
 func _on_settings_pressed():
 		get_tree().change_scene_to_file("res://scenes/options.tscn")
 		
-
 func _on_quit_pressed():
 	get_tree().quit()
 
@@ -30,4 +31,5 @@ func _on_fade_timer_timeout():
 	if button_type == "Start" :
 		get_tree().change_scene_to_file("res://scenes/game.tscn")
 
-
+func _on_load_pressed():
+	get_tree().change_scene_to_file("res://scenes/Load_data.tscn")

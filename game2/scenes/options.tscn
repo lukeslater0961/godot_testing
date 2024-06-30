@@ -81,6 +81,7 @@ text = "SFX
 "
 
 [node name="SFXVolume" type="HSlider" parent="sliders/SFX_label"]
+layout_mode = 0
 offset_left = -184.0
 offset_top = 72.0
 offset_right = 263.0
@@ -90,8 +91,8 @@ min_value = -28.0
 max_value = 0.0
 
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
-[connection signal="value_changed" from="sliders/Master_label/MasterVolume" to="." method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="sliders/Master_label/MasterVolume" to="." method="_on_master_volume_value_changed"]
+[connection signal="value_changed" from="sliders/Master_label/MasterVolume" to="." method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="sliders/Music_label/MusicVolume" to="." method="_on_music_volume_value_changed"]
-[connection signal="value_changed" from="sliders/SFX_label/SFXVolume" to="." method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="sliders/SFX_label/SFXVolume" to="." method="_on_sfx_volume_value_changed"]
+[connection signal="value_changed" from="sliders/SFX_label/SFXVolume" to="." method="_on_h_slider_value_changed"]

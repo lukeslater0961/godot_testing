@@ -88,11 +88,20 @@ theme_override_fonts/font = ExtResource("4_1w1yb")
 theme_override_font_sizes/font_size = 15
 text = "made by @lslater"
 
-[node name="game_area" parent="." instance=ExtResource("7_bb73n")]
-position = Vector2(528, 266)
+[node name="Timer" type="Label" parent="labels"]
+offset_left = 968.0
+offset_top = 32.0
+offset_right = 1051.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("4_1w1yb")
+theme_override_font_sizes/font_size = 30
+text = "score : "
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_jlors")
 bus = &"Music"
+
+[node name="GameArea" parent="." instance=ExtResource("7_bb73n")]
+position = Vector2(528, 264)
 
 [connection signal="pressed" from="Button_controller/Options" to="." method="_on_options_pressed"]

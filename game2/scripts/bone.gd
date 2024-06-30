@@ -14,4 +14,3 @@ func _process(delta):
 func _on_body_entered(_body):
 		audio_stream_player_2d.play()
 		Globals.current_health -= 1
-

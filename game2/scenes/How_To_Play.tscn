@@ -140,18 +140,18 @@ autoplay = "turning_head"
 [node name="Info" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Info"]
-offset_left = 712.0
-offset_top = 512.0
-offset_right = 1030.0
-offset_bottom = 571.0
+offset_left = 600.0
+offset_top = 408.0
+offset_right = 918.0
+offset_bottom = 467.0
 theme_override_fonts/font = ExtResource("3_14xw5")
 theme_override_font_sizes/font_size = 26
 text = "Dodge the bones to beat
  papyrus and finish the game "
 
 [node name="bone" type="Sprite2D" parent="Info/Label"]
-position = Vector2(352, 8)
-scale = Vector2(3.57692, 4.19231)
+position = Vector2(344, 64)
+scale = Vector2(5, 5.86)
 texture = ExtResource("6_3hs43")
 region_enabled = true
 region_rect = Rect2(6, 6, 13, 26)

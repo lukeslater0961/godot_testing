@@ -3,6 +3,7 @@ extends Node
 var	prev_scene = null;
 var current_health = 20
 var Max_health = 20
+var High_score = 0
 
 func _show_node(node: Node2D, x: float , y: float): #to be used to make a node appear
 	node.show()
