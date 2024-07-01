@@ -31,6 +31,7 @@ func _check_user(user_input):#loads (if file exists) the data of the given file/
 	else:
 		var file = FileAccess.open(filename, FileAccess.READ)
 		Globals.High_score = file.get_var()
+		Globals.current_user = user_input
 		print("data loaded")
 
 func _save_game(user_input):#loads current data into the given file/user

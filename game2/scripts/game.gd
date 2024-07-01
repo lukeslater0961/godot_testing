@@ -4,6 +4,7 @@ extends Node2D
 @onready var health_levels = $"labels/health levels"
 @onready var red_heart = $Red_heart
 @onready var timer = $labels/Timer
+@onready var player_name = $"labels/player name"
 
 var score = 0;
 
@@ -26,10 +27,12 @@ func _ready():
 	Setup()
 
 func Setup():
-	Globals.current_health = 20	
+	Globals.current_health = 20
 	Globals.prev_scene = get_tree().current_scene.scene_file_path #sets current scene global var 
 	health_levels.text = str(Globals.current_health)+ "/" + str(Globals.Max_health)#shows health
+	player_name.text = Globals.current_user
 	timer.text = "score :" + str(score)#shows score at 0
+	
 	await get_tree().create_timer(1.5).timeout #waits for 1.5 seconds
 	Start()
 

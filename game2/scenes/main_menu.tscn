@@ -46,16 +46,18 @@ texture_pressed = ExtResource("5_pnf71")
 
 [node name="Quit" type="TextureButton" parent="Button_manager"]
 layout_mode = 1
-offset_left = 1101.0
-offset_right = 1151.0
-offset_bottom = 53.0
+offset_left = 1086.0
+offset_top = 19.0
+offset_right = 1136.0
+offset_bottom = 72.0
 texture_normal = ExtResource("6_vcdvj")
 
 [node name="How_to" type="TextureButton" parent="Button_manager"]
 layout_mode = 0
-offset_top = 1.0
-offset_right = 292.0
-offset_bottom = 37.0
+offset_left = 25.0
+offset_top = 21.0
+offset_right = 317.0
+offset_bottom = 57.0
 texture_normal = ExtResource("8_eijj5")
 texture_pressed = ExtResource("9_2nijq")
 
@@ -100,10 +102,10 @@ theme_override_font_sizes/font_size = 15
 text = "made by @lslater"
 
 [node name="High_score" type="Label" parent="labels"]
-offset_left = 1.0
-offset_top = 42.0
-offset_right = 217.0
-offset_bottom = 89.0
+offset_left = 34.0
+offset_top = 63.0
+offset_right = 176.0
+offset_bottom = 95.0
 theme_override_fonts/font = ExtResource("9_ng0cr")
 theme_override_font_sizes/font_size = 30
 text = "High score =

@@ -11,7 +11,6 @@
 [sub_resource type="GDScript" id="GDScript_1b6dm"]
 script/source = "extends \"res://scripts/Red_heart.gd\"
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
 
 func _physics_process(_delta):
 	# Get the input direction and handle the movement
@@ -24,6 +23,8 @@ func _physics_process(_delta):
 	
 	if direction_y:
 		velocity.y = direction_y * SPEED
+	else:
+		velocity.y = move_toward(velocity.y, 0, SPEED)
 	move_and_slide()
 "
 
