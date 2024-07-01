@@ -43,7 +43,7 @@ func game_patterns():#loads the patterns
 	await get_tree().create_timer(8).timeout
 	Globals._instantiate_object("res://scenes/bones/3_bones_2_1.tscn")
 
-func _process(delta : float): # updates the health
+func _process(delta : float): # updates the health and timer 
 	await get_tree().create_timer(1.5).timeout
 	score += delta
 	timer.text = "score :" + str("%.1f" % score) + " s"

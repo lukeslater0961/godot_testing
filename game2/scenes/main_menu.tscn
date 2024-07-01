@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://btvurdtowism0"]
+[gd_scene load_steps=15 format=3 uid="uid://btvurdtowism0"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_xla4c"]
 [ext_resource type="AudioStream" uid="uid://cgjnnyb05mbj" path="res://assets/menu_song.mp3" id="2_3kesj"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bgewo0e0vqgwp" path="res://assets/Menu Textures/How_to_play_blur.png" id="9_2nijq"]
 [ext_resource type="FontFile" uid="uid://p63ukbvo7s51" path="res://assets/Fonts/DeterminationSansWebRegular-369X.ttf" id="9_ng0cr"]
 [ext_resource type="PackedScene" uid="uid://ca6bwqhpopenf" path="res://scenes/fade_transition.tscn" id="11_0uerq"]
+[ext_resource type="PackedScene" uid="uid://dh4m0nkbv01n0" path="res://scenes/Load_data.tscn" id="14_ehsvv"]
 
 [node name="Main Menu" type="Node2D"]
 script = ExtResource("1_xla4c")
@@ -107,6 +108,9 @@ theme_override_fonts/font = ExtResource("9_ng0cr")
 theme_override_font_sizes/font_size = 30
 text = "High score =
 "
+
+[node name="load_save" parent="." instance=ExtResource("14_ehsvv")]
+visible = false
 
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Settings" to="." method="_on_settings_pressed"]
