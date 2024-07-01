@@ -38,9 +38,9 @@ texture_pressed = ExtResource("3_6j2sr")
 [node name="Settings" type="TextureButton" parent="Button_manager"]
 layout_mode = 0
 offset_left = 376.0
-offset_top = 392.0
+offset_top = 386.0
 offset_right = 788.0
-offset_bottom = 516.0
+offset_bottom = 440.0
 texture_normal = ExtResource("4_bvrrq")
 texture_pressed = ExtResource("5_pnf71")
 
@@ -64,7 +64,7 @@ layout_mode = 0
 offset_left = 483.0
 offset_top = 320.0
 offset_right = 657.0
-offset_bottom = 428.0
+offset_bottom = 366.0
 texture_normal = ExtResource("7_u3l13")
 texture_pressed = ExtResource("8_lrbjb")
 

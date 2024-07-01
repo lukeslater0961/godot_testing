@@ -73,6 +73,8 @@ texture_pressed = ExtResource("7_qx06g")
 [node name="Error_sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_kclf0")
 
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="Button_manager/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Input/Load_button" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="Input/Save_button" to="." method="_on_save_button_pressed"]

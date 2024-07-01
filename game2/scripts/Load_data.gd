@@ -3,7 +3,10 @@ extends Node2D
 @onready var load_button = $Input/Load_button
 @onready var error_sound = $Error_sound
 
-func _on_texture_button_pressed():#hide's/closes the window/scene
+func _on_texture_button_pressed():#hide's/closes the window and resets the properties
+	line_edit.text = ""
+	line_edit.add_theme_color_override("font_placeholder_color", Color(0.5, 0.5, 0.5))
+	line_edit.placeholder_text = str("Name")
 	Globals._hide_node(self)
 
 func _on_load_pressed():#gets user input and calls loading function
@@ -35,3 +38,4 @@ func _save_game(user_input):#loads current data into the given file/user
 	var file = FileAccess.open(filename, FileAccess.WRITE)
 	file.store_var(Globals.High_score)
 	print("saved")
+
