@@ -7,11 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://bem48x0dp1bgc" path="res://assets/Menu Textures/Settings.png" id="4_bvrrq"]
 [ext_resource type="Texture2D" uid="uid://cv41fvj6fm67k" path="res://assets/Menu Textures/Settings_blur.png" id="5_pnf71"]
 [ext_resource type="Texture2D" uid="uid://s3dp8xglp11x" path="res://assets/Menu Textures/Quit.png" id="6_vcdvj"]
-[ext_resource type="Texture2D" uid="uid://3s12cr8dkw4m" path="res://assets/Menu Textures/Load.png" id="7_u3l13"]
 [ext_resource type="Texture2D" uid="uid://dv1marlv4q58" path="res://assets/Menu Textures/how_to_play.png" id="8_eijj5"]
-[ext_resource type="Texture2D" uid="uid://chg2g33ap3gki" path="res://assets/Menu Textures/Load_blur.png" id="8_lrbjb"]
 [ext_resource type="Texture2D" uid="uid://bgewo0e0vqgwp" path="res://assets/Menu Textures/How_to_play_blur.png" id="9_2nijq"]
 [ext_resource type="FontFile" uid="uid://p63ukbvo7s51" path="res://assets/Fonts/DeterminationSansWebRegular-369X.ttf" id="9_ng0cr"]
+[ext_resource type="Texture2D" uid="uid://nqjg1h0iu7wu" path="res://assets/Menu Textures/save.png" id="9_pyybi"]
+[ext_resource type="Texture2D" uid="uid://qoiqn0jk4i70" path="res://assets/Menu Textures/save_blur.png" id="10_g4f35"]
 [ext_resource type="PackedScene" uid="uid://ca6bwqhpopenf" path="res://scenes/fade_transition.tscn" id="11_0uerq"]
 [ext_resource type="PackedScene" uid="uid://dh4m0nkbv01n0" path="res://scenes/Load_data.tscn" id="14_ehsvv"]
 
@@ -45,7 +45,7 @@ texture_normal = ExtResource("4_bvrrq")
 texture_pressed = ExtResource("5_pnf71")
 
 [node name="Quit" type="TextureButton" parent="Button_manager"]
-layout_mode = 1
+layout_mode = 0
 offset_left = 1086.0
 offset_top = 19.0
 offset_right = 1136.0
@@ -61,14 +61,14 @@ offset_bottom = 57.0
 texture_normal = ExtResource("8_eijj5")
 texture_pressed = ExtResource("9_2nijq")
 
-[node name="Load" type="TextureButton" parent="Button_manager"]
+[node name="Save" type="TextureButton" parent="Button_manager"]
 layout_mode = 0
-offset_left = 483.0
+offset_left = 480.0
 offset_top = 320.0
-offset_right = 657.0
+offset_right = 654.0
 offset_bottom = 366.0
-texture_normal = ExtResource("7_u3l13")
-texture_pressed = ExtResource("8_lrbjb")
+texture_normal = ExtResource("9_pyybi")
+texture_pressed = ExtResource("10_g4f35")
 
 [node name="Menu music" type="AudioStreamPlayer2D" parent="."]
 visible = false
@@ -81,7 +81,7 @@ visible = false
 
 [node name="Fade_timer" type="Timer" parent="fade_transition"]
 
-[node name="labels" type="Node" parent="."]
+[node name="labels" type="Node2D" parent="."]
 
 [node name="Madeby" type="Label" parent="labels"]
 offset_left = 1053.0
@@ -108,7 +108,8 @@ offset_right = 176.0
 offset_bottom = 95.0
 theme_override_fonts/font = ExtResource("9_ng0cr")
 theme_override_font_sizes/font_size = 30
-text = "High score =
+text = "
+
 "
 
 [node name="load_save" parent="." instance=ExtResource("14_ehsvv")]
@@ -118,5 +119,5 @@ visible = false
 [connection signal="pressed" from="Button_manager/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Button_manager/How_to" to="." method="_on_how_to_pressed"]
-[connection signal="pressed" from="Button_manager/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Button_manager/Save" to="." method="_on_save_pressed"]
 [connection signal="timeout" from="fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

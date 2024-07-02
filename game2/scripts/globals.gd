@@ -20,3 +20,10 @@ func _instantiate_object(string):#to instantiate an object
 	object_instance.position.x = 750
 	add_child(object_instance)
 
+func has_special_characters(string):
+	var regex = RegEx.new()
+	regex.compile("[^a-zA-Z0-9]+")
+	if regex.search(str(string)):
+		return true
+	else:
+		return false

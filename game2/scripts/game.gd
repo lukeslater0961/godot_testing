@@ -2,9 +2,9 @@ extends Node2D
  
 @onready var audio_stream_player_2d = $AudioStreamPlayer2D
 @onready var health_levels = $"labels/health levels"
+@onready var player_name = $"labels/player name"
 @onready var red_heart = $Red_heart
 @onready var timer = $labels/Timer
-@onready var player_name = $"labels/player name"
 
 var score = 0;
 
