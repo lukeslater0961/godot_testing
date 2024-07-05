@@ -32,22 +32,17 @@ func Setup():
 	health_levels.text = str(Globals.current_health)+ "/" + str(Globals.Max_health)#shows health
 	player_name.text = Globals.current_user
 	timer.text = "score :" + str(score)#shows score at 0
-	
 	await get_tree().create_timer(1.5).timeout #waits for 1.5 seconds
 	Start()
 
 func Start():
 	Globals._show_node(red_heart, 574, 360)
 	audio_stream_player_2d.play()#starts 
-	game_patterns()
-
-func game_patterns():#loads the patterns
-	Globals._instantiate_object("res://scenes/bones/3_bones_ascending.tscn")
-	await get_tree().create_timer(8).timeout
-	Globals._instantiate_object("res://scenes/bones/3_bones_2_1.tscn")
+	Patterns.starter()
 
 func _process(delta : float): # updates the health and timer 
 	await get_tree().create_timer(1.5).timeout
 	score += delta
 	timer.text = "score :" + str("%.1f" % score) + " s"
 	health_levels.text = str(Globals.current_health) + "/" + str(Globals.Max_health)
+

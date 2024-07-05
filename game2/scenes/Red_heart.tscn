@@ -6,6 +6,7 @@
 script/source = "extends CharacterBody2D
 
 const SPEED = 200.0
+signal moving
 
 func _physics_process(_delta):
 	var direction_x = Input.get_axis(\"Move_left\", \"Move_right\")
@@ -15,12 +16,15 @@ func _physics_process(_delta):
 		velocity.x = direction_x * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		
+
 	if direction_y:
 		velocity.y = direction_y * SPEED
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
+	
+	Globals.player_moving = direction_x != 0 or direction_y != 0 #checks if either directions are positive and puts the bool to true if they are
 	move_and_slide()
+
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_77hc8"]
@@ -37,3 +41,5 @@ texture = ExtResource("1_xbgfj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_77hc8")
+
+[connection signal="moving" from="." to="." method="_on_moving"]
