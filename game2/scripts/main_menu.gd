@@ -10,16 +10,17 @@ var	button_type = null;
 func _ready():#on scene load sets prev scene , hides mouse and shows the high_score
 	Globals.prev_scene = get_tree().current_scene.scene_file_path
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	if Globals.High_score != 0:	
-		high_score.text = "High score = " + str("%.1f" % Globals.High_score) + " s"
+	if Globals.High_score != 0:
+		high_score.text = "High score = " + str("%f" % Globals.High_score) + " s"
 	if Globals.current_user == "":
 		Globals._show_node(load_save, 0, 0)
 		Globals._hide_node(labels)
-		
+	else :
+		menu_music.play()
 
 func _process(delta):#refreshes high score if file is loaded
 	if Globals.High_score != 0:
-		high_score.text = "High score = " + str("%.1f" % Globals.High_score) + " s"
+		high_score.text = Globals.current_user + "'s High score = " + str("%.1f" % Globals.High_score) + " s"
 	if Globals.current_user:
 		Globals._show_node(labels, labels.position.x, labels.position.y)
 		

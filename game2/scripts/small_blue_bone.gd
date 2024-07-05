@@ -5,9 +5,9 @@ var player
 var Speed := 100
 
 func _on_body_entered(body):
-	check_damage(body)
+	check_damage()
 
-func check_damage(body):#removes health if character is moving when in contact
+func check_damage():#removes health if character is moving when in contact
 	if Globals.player_moving:
 		Globals.current_health -= 1
 

@@ -14,14 +14,20 @@ func _show_node(node: Node2D, x: float , y: float): #to be used to make a node a
 func _hide_node(node: Node2D): #to be used to make a node disappear
 	node.hide()
 
-func _instantiate_object(string):#to instantiate an object
+func _instantiate_object(string, side):#to instantiate an object
 	var object = load(string)
 	var	object_instance = object.instantiate()
-	if string == "res://scenes/bones/small_blue_bone.tscn":
-		object_instance.position.y = 435
+	if string == "res://scenes/bones/big_blue_bone.tscn":
+		if side:
+			object_instance.position.y = 300
+		else:
+			object_instance.position.y = 410
 		object_instance.position.x = 750
 	else:
-		object_instance.position.y = 450
+		if side:
+			object_instance.position.y = 300
+		else:
+			object_instance.position.y = 445
 		object_instance.position.x = 750
 	add_child(object_instance)
 
