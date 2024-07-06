@@ -103,5 +103,3 @@ bus = &"Music"
 
 [node name="GameArea" parent="." instance=ExtResource("7_bb73n")]
 position = Vector2(528, 264)
-
-[connection signal="pressed" from="Button_controller/Options" to="." method="_on_options_pressed"]

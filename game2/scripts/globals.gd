@@ -1,7 +1,9 @@
 extends Node
 
 var	prev_scene = null;
-var current_health = 20
+var current_health = 20:
+	set(value):#forces the health value to stay between the values 0 and 20
+		current_health = clamp(value, 0, 20)
 var Max_health = 20
 var High_score = 0
 var current_user = ""
