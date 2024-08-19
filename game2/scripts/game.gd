@@ -45,4 +45,3 @@ func _process(delta : float): # updates the health and timer
 	score += delta
 	timer.text = "score :" + str("%.1f" % score) + " s"
 	health_levels.text = str(Globals.current_health) + "/" + str(Globals.Max_health)
-

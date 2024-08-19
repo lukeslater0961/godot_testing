@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://blvh14lx7458j"]
+[gd_scene load_steps=10 format=3 uid="uid://blvh14lx7458j"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_h01pn"]
 [ext_resource type="PackedScene" uid="uid://ca6bwqhpopenf" path="res://scenes/fade_transition.tscn" id="1_iy7d1"]
+[ext_resource type="PackedScene" uid="uid://dbp8t228gtm10" path="res://scenes/Blue_heart.tscn" id="2_w15ty"]
 [ext_resource type="PackedScene" uid="uid://bchm5cn5y0i8w" path="res://scenes/papyrus.tscn" id="3_ox44d"]
 [ext_resource type="FontFile" uid="uid://p63ukbvo7s51" path="res://assets/Fonts/DeterminationSansWebRegular-369X.ttf" id="4_1w1yb"]
 [ext_resource type="Texture2D" uid="uid://ckt7k0l32gjee" path="res://assets/Menu Textures/gear_icon.png" id="4_87ipe"]
@@ -11,6 +12,10 @@
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_h01pn")
+
+[node name="Blue_heart" parent="." instance=ExtResource("2_w15ty")]
+visible = false
+position = Vector2(814, 903)
 
 [node name="Red_heart" parent="." instance=ExtResource("7_j7ofg")]
 visible = false

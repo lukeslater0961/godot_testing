@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://q5b267j4r1o5"]
+
+[ext_resource type="Texture2D" uid="uid://biisyhonvk8wt" path="res://assets/Sprites/Undertale.png" id="1_gd7mn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_034yf"]
+
+[node name="Blue_Heart" type="CharacterBody2D"]
+position = Vector2(589, 343)
+scale = Vector2(0.02, 0.02)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gd7mn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(77.93, 77.93)
+shape = SubResource("CircleShape2D_034yf")

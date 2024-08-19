@@ -18,7 +18,7 @@ func _ready():#on scene load sets prev scene , hides mouse and shows the high_sc
 	else :
 		menu_music.play()
 
-func _process(delta):#refreshes high score if file is loaded
+func _process(_delta):#refreshes high score if file is loaded
 	if Globals.High_score != 0:
 		high_score.text = Globals.current_user + "'s High score = " + str("%.1f" % Globals.High_score) + " s"
 	if Globals.current_user:

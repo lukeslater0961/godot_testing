@@ -2,12 +2,18 @@ extends Node
 var current_count = 0
 var previous_number = null
 
+
 func starter():
 	Globals._instantiate_object("res://scenes/bones/3_bones_ascending.tscn", 0)
 	await get_tree().create_timer(8).timeout
 	Globals._instantiate_object("res://scenes/bones/3_bones_2_1.tscn", 0)
 	await get_tree().create_timer(3).timeout
 	random_blue_bones()
+	await get_tree().create_timer(8).timeout
+	Globals._instantiate_object("res://scenes/bones/3_bones_2_1.tscn", 0)
+	await get_tree().create_timer(3).timeout
+	Globals._instantiate_object("res://scenes/bones/3_bones_ascending.tscn", 0)
+	ActivateBlue()
 
 func random_blue_bones():
 	for i in range(8):
@@ -30,3 +36,6 @@ func check_reccurences(random_number): #checks for reccurences inside the random
 		current_count = 0
 	previous_number = random_number
 	return (random_number)
+
+func		ActivateBlue():
+	print("activating blue here")

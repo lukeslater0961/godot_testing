@@ -10,6 +10,7 @@ var current_user = ""
 var player_moving = false
 
 func _show_node(node: Node2D, x: float , y: float): #to be used to make a node appear
+	print_debug(node.name)
 	node.show()
 	node.position = Vector2(x, y)
 
@@ -19,13 +20,17 @@ func _hide_node(node: Node2D): #to be used to make a node disappear
 func _instantiate_object(string, side):#to instantiate an object
 	var object = load(string)
 	var	object_instance = object.instantiate()
+
+	if (get_tree().current_scene.name != "Game"):
+		return
 	if string == "res://scenes/bones/big_blue_bone.tscn":
 		if side:
 			object_instance.position.y = 300
 		else:
 			object_instance.position.y = 410
 		object_instance.position.x = 750
-	else:
+		return
+	else :
 		if side:
 			object_instance.position.y = 300
 		else:

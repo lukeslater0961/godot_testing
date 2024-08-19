@@ -39,4 +39,3 @@ func _create_user_file(user_input, filename):#loads current data into the given 
 		error_sound.play()
 		line_edit.placeholder_text = "invalid name"
 		line_edit.text = ""
-

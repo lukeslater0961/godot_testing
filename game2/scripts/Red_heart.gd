@@ -23,4 +23,3 @@ func _physics_process(_delta):
 	else:
 		Globals.player_moving = false
 	move_and_slide()
-
