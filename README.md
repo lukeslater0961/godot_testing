@@ -6,7 +6,7 @@ Welcome to the repository where I stash my initial games and projects developed 
 
 Here is a list of some projects you'll find in this repository:
 
-1.**Platformer Prototype**: A simple platformer game to experiment with physics, collisions, and character movement.
+1.**Platformer Prototype**: A simple platformer game to experiment with physics, collisions, and character movement. (Using Brackey's [Godot introduction](https://www.youtube.com/watch?v=LOhfqjmasi0&t=3724s))
 
 2.**In Progress**
 
